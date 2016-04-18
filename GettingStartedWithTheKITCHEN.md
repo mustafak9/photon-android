@@ -1,0 +1,22 @@
+# Introduction #
+
+This is more thought to be for developers, to set up and change system.ext2 and initrd.gz partitions and is not meant to be used by people that don't know what they are doing! So do not expect any "support". Suggested improvements are very welcome !
+
+# Requirements #
+
+  * First of all you will need <b>working Linux</b> (Ubuntu recommended).
+  * It could be possible that you will have to install genext2fs. Check this by typing this to your console:<br><b>sudo apt-get install genext2fs</b>
+<ul><li>You will have to download and install <b>my-mini Kitchen</b>. You can get it here in our sources, but easiest way would be typing:<br> <b>svn checkout <a href='http://photon-android.googlecode.com/svn/tools/my-mini-kitchen'>http://photon-android.googlecode.com/svn/tools/my-mini-kitchen</a></b><br>to your console. This will create a folder "my-mini-kitchen". Enter the folder and start with: <b>./start</b> and some folders will be created...</li></ul>
+
+<h1>Working with the kitchen</h1>
+
+This will be the easiest thing on the world:<br>
+<br>
+<ul><li>Put your original system.ext2 and/or initrd.gz, zImage files to the folder <b>ORIGIN</b>
+</li><li><b>Option 1</b> in the menu will setup a new WORKING folder. All files you have put to ORIGIN before will now have been extracted.<br>
+</li><li><b>Edit</b> your files how ever you want, but keep an eye on the permissions!<br>
+</li><li><b>Option 2</b> sets up photon_defconfig at the compiler, cleans up and starts compiling. Don't forget to setup the Makefile with your toolchain. Kitchen won't do that..  yet :D<br>
+</li><li><b>Option 3</b> gives you the possibility to connect to a kernel source on your system, and allows you to get the compiled kernel & modules. The files will be added to system, you won't have to care about anything else.<br>
+</li><li><b>Option 4</b> in the menu will build all files you have set up before and release them to the OUTPUT folder. You can now take the files and copy them to your SD-Card.</li></ul>
+
+That's it! Have fun :)
